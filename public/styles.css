@@ -87,6 +87,10 @@ form.create-note input {
   resize: none;
 }
 
+input.waitToClick::placeholder {
+  text-align: center;
+}
+
 form.create-note textarea {
   width: 100%;
   border: none;

@@ -37,7 +37,7 @@ function handleClicl(event){
   return (
     <div>
       <form className="create-note">
-        <input name="title" placeholder={!isExpanded ? "Click here to create new note" : "Title"} onChange={handleChange} value={inputText.title} onFocus={expand}/>
+        <input className={!isExpanded ? "waitToClick" : null} name="title" placeholder={!isExpanded ? "Click here to create a new note" : "Title"} onChange={handleChange} value={inputText.title} onFocus={expand}/>
         {isExpanded && <textarea name="content" placeholder="Take a note..." rows="3" onChange={handleChange} value={inputText.content}/>}
         {isExpanded && <Zoom in={true}><Fab type="submit" onClick={handleClicl} aria-label="add"><AddIcon /></Fab></Zoom>}
       </form>
